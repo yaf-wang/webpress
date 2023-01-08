@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    body {
+      padding: 80px;
+      margin: 100px;
+    }
+
+    .parent {
+      position: relative;
+      width: 500px;
+      height: 500px;
+      border: 60px dashed #b10202;
+      padding: 50px;
+      background: #b15702;
+    }
+
+    /* .parent:before {
+      content: '';
+      display: block;
+      width: 300px;
+      height: 800px;
+      background-color: aquamarine;
+    } */
+
+    .child {
+      width: 200px;
+      height: 200px;
+      margin: 30px;
+      border: 20px dashed #7402b1;
+      padding: 10px;
+      background: #02b1b1;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="parent">
+    <p>parent</p>
+    <div class="child">
+      child
+    </div>
+  </div>
+
+  <div id="res"></div>
+
+  <script>
+    const parent = document.querySelector('.parent');
+    const child = document.querySelector('.child');
+    const res = document.getElementById('res');
+
+    var p = document.createElement('p');
+    p.innerText = ' parent offsetHeight = boder(60*2) + padding(50*2) + content(500) = ' + parent.offsetHeight;
+    res.appendChild(p);
+
+    var p2 = p.cloneNode();
+    p2.innerText = 'child offsetHeight = boder(20*2) + padding(10*2) + content(200) = ' + child.offsetHeight;
+    res.appendChild(p2);
+
+    var p3 = p.cloneNode();
+    p3.innerText = 'child offsetLeft = parent-left-padding(50) + margin-left(30) = ' + child.offsetLeft;
+    res.appendChild(p3);
+
+    var p4 = p.cloneNode();
+    p4.innerText = 'child offsetTop = parent-top-padding(50) + margin-top(30) = ' + child.offsetTop;
+    res.appendChild(p4);
+
+    console.log('child.offsetParent --->', child.offsetParent)
+
+    var p5 = p.cloneNode();
+    p5.innerText = 'parent clientHeight = padding(50 * 2) + css height(500)= ' + parent.clientHeight;
+    res.appendChild(p5);
+
+    var p6 = p.cloneNode();
+    p6.innerText = 'parent clientTop = top-border(60) = ' + parent.clientTop;
+    res.appendChild(p6);
+
+    var p7 = p.cloneNode();
+    p7.innerText = 'parent clientLeft = left-border(60) = ' + parent.clientLeft;
+    res.appendChild(p7);
+
+    var p8 = p.cloneNode();
+    p8.innerText = 'child clientLeft = left-border(20) = ' + child.clientLeft;
+    res.appendChild(p8);
+
+    // offsetLeft 内容从右到左
+    parent.addEventListener('click', (e) => {
+      console.log('screenX, screenY', e.screenX, e.screenY);
+      console.log('pageX, pageY', e.pageX, e.pageY);
+      console.log('x, y', e.x, e.y);
+      console.log('clientX, clientY', e.clientX, e.clientY);
+      console.log('offsetX, offsetY', e.offsetX, e.offsetY)
+      console.log('--------->\n\n')
+    })
+  </script>
+</body>
+
+</html>

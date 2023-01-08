@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>说说new操作符具体干了什么？</title>
+</head>
+
+<body>
+
+  <script>
+    function Person(name, age) {
+      this.name = name
+      this.age = age
+    }
+
+    Person.prototype.say = function() {
+      console.log(this.name + ' say hello!');
+    }
+
+    var p1 = new Person('张三', 18);
+    console.log(p1);
+
+    //
+    function myNew(Func, ...args) {
+      // 1. 创建一个空对象
+      var obj = {}
+
+      // 2. 将对象和构造函数通过原型链链接起来
+      obj.__proto__ = Func.prototype
+
+      // 3. 将构造函数的 this 指向该对象，接收构造函数返回值
+      var res = Func.apply(obj, args)
+
+      // 4. 返回值是对象话，正常返回，若是原始值，忽略
+      return res instanceof Object ? res : obj
+    }
+
+    const p2 = myNew(Person, '王麻子', 45)
+    console.log(p2);
+  </script>
+</body>
+
+</html>

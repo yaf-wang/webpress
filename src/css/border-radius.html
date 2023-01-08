@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    body,
+    p {
+      margin: 0;
+      padding: 0;
+    }
+
+    #app {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    .item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 400px;
+      height: 400px;
+      margin-bottom: 20px;
+      text-align: center;
+      background-color: aquamarine;
+      overflow: hidden;
+    }
+
+    p {
+      font-size: 12px;
+      line-height: 1.2;
+    }
+  </style>
+</head>
+
+<body>
+  椭圆公式：x^2/a^2+y^2/b^2=1，(a>b>0)；
+  https://w3c.github.io/csswg-drafts/css-backgrounds/#border-radius
+  <div id="app">
+    <div class="item" style="border-radius: 50px;">
+      <pre>border-radius: 50px;</pre>
+      <p>四个角相同</p>
+    </div>
+
+    <div class="item" style="border-radius: 50px 20px;">
+      <pre>border-radius: 50px 20px;</pre>
+      <p>上左/下右 50px</p>
+      <p>上右/下左 20px</p>
+    </div>
+
+    <div class="item" style="border-radius: 120px 80px 0px;">
+      <pre>border-radius: 120px 80px 0px;</pre>
+      <p>上左 120px</p>
+      <p>上右/下左 20px</p>
+      <p>下右 0</p>
+    </div>
+
+    <div class="item" style="border-radius: 120px 80px 40px 0px;">
+      <pre>border-radius: 120px 80px 40px 0px;</pre>
+      <p>上左 120px</p>
+      <p>上右 80px</p>
+      <p>下右 40px</p>
+      <p>下左 0</p>
+    </div>
+
+    <div class="item" style="border-radius: 50px / 20px;">
+      <pre>border-radius: 50px / 20px;</pre>
+    </div>
+
+    <div class="item" style="border-radius: 100px / 50px 25px;">
+      <pre>border-radius: 50px / 20px;</pre>
+    </div>
+
+    <div class="item" style="border-radius: 200px / 160px 80px 40px;">
+      <pre>border-radius: 200px / 160px 80px 40px;</pre>
+    </div>
+
+    <div class="item" style="border-radius: 200px / 160px 80px 40px 20px;">
+      <pre>border-radius: 200px / 160px 80px 40px 20px;</pre>
+    </div>
+
+    <div class="item" style="border-radius: 200px 100px / 160px 80px 40px 20px;">
+      <pre>border-radius: 200px 100px / 160px 80px 40px 20px;</pre>
+    </div>
+
+    <div class="item" style="border-radius: 200px 100px 50px / 160px 80px 40px 20px;">
+      <pre>border-radius: 200px 100px 50px / 160px 80px 40px 20px;</pre>
+    </div>
+
+    <div class="item" style="border-radius: 200px 100px 50px 25px / 160px 80px 40px 20px;">
+      <pre>border-radius: 200px 100px 50px 25px / 160px 80px 40px 20px;</pre>
+    </div>
+
+    <div class="item" style="border-radius: 200px 100px / 160px 80px;">
+      <pre>border-radius: 200px 100px 50px 25px / 160px 80px 40px 20px;</pre>
+    </div>
+
+    <div class="item" style="border-top-right-radius: 400px;">
+      <pre>border-top-right-radius: 400px;</pre>
+    </div>
+
+    <div class="item" style="border-radius: 100% 0 50% 50% / 50% 0 100% 50%;">
+      <pre>border-radius: 100% 0 50% 50% / 50% 0 100% 50%;</pre>
+      <p>水滴</p>
+    </div>
+  </div>
+</body>
+
+</html>
