@@ -56,7 +56,7 @@ const jsSidebar = [
     title: 'JavaScript 高级程序设计-第四版',
     path: '/javascript/1',
     collapsable: false,
-    sidebarDepth: 1,
+    sidebarDepth: 2,
     children: [
       '/javascript/1/',
       '/javascript/1/04',

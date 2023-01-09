@@ -24,6 +24,10 @@
 
 ## 动画渲染库
 
+- animejs
+
+  Anime.js 是一个轻量级的 JavaScript 动画库，具有简单但功能强大的 API。它与 CSS 属性，SVG，DOM 属性和 JavaScript 对象一起使用。
+
 - Mo.js
 
 是一个简洁、高效的图形动画库，拥有流畅的动画和惊人的用户体验。[官网](https://mojs.github.io/)
@@ -67,6 +71,10 @@
 - particles.js
 
   原子颗粒特效动画库的使用
+
+- CreateJS
+
+  CreateJS 库是一款 HTML5 游戏开发的引擎，是一套可以构建丰富交互体验的 HTML5 游戏的开源工具包
 
 ## 幻灯片 JS 库
 
