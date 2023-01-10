@@ -48,6 +48,8 @@ const jsSidebar = [
     collapsable: false,
     sidebarDepth: 1,
     children: [
+      '/javascript/0001/dom-size',
+      '/javascript/0001/iife',
       '/javascript/0001/01',
       '/javascript/0001/02',
     ],
