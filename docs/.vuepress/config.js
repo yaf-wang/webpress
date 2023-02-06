@@ -1,4 +1,6 @@
 const projectSidebar = require('../project/sidebar')
+const nav = require('./nav')
+const JSProSidebar = require('../javascript/professional/sidebar')
 
 const computerSidebar = [
   '/computer/verdaccio',
@@ -34,6 +36,7 @@ const computerSidebar = [
     children: [
       '/computer/protocol/',
       '/computer/protocol/polling',
+      '/computer/protocol/https',
     ],
   },
   ['character', '字符集'],
@@ -52,21 +55,12 @@ const jsSidebar = [
       '/javascript/0001/iife',
       '/javascript/0001/01',
       '/javascript/0001/02',
+      '/javascript/0001/03',
+      '/javascript/0001/async-defer',
+      '/javascript/0001/storage',
     ],
   },
-  {
-    title: 'JavaScript 高级程序设计-第四版',
-    path: '/javascript/1',
-    collapsable: false,
-    sidebarDepth: 2,
-    children: [
-      '/javascript/1/',
-      '/javascript/1/04',
-      '/javascript/1/05',
-      '/javascript/1/06',
-      '/javascript/1/08',
-    ],
-  }
+  JSProSidebar
 ]
 
 const cssSidebar = [
@@ -105,17 +99,16 @@ module.exports = {
   markdown: {
     lineNumbers: true
   },
+  extraWatchFiles: [ // 指定额外的需要被监听的文件
+    '.vuepress/nav.js',
+
+    // TODO 优化为动态获取规则
+    '../javascript/professional/sidebar.js'
+  ],
   themeConfig: {
     sidebarDepth: 3,
-    nav: [
-      { text: 'Home', link: '/' },
-      { text: 'JavaScript', link: '/javascript/' },
-      { text: 'CSS', link: '/csses/' },
-      { text: 'VUE', link: '/vue/notes/0001' },
-      { text: '实战项目', link: '/project/sgg-vue' },
-      { text: '运维', link: '/computer/verdaccio' },
-      { text: '其他', link: '/other/semver' },
-    ],
+    smoothScroll: true,
+    nav,
     sidebar: {
       '/computer/': computerSidebar,
       '/javascript/': jsSidebar,
