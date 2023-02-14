@@ -1,23 +1,31 @@
 module.exports = [
   { text: 'Home', link: '/' },
-  // {
-  //   text: '前端开发',
-  //   items: [
-  //     {
-  //       text: 'javascript 基础知识',
-  //       items: [
-  //         { text: 'JavaScript 高级程序设计', link: '/' }
-  //       ]
-  //     },
-  //     {
-  //       text: 'JavaScript',
-  //       items: [
-  //         { text: 'JavaScript 高级程序设计', link: '/' }
-  //       ]
-  //     },
-  //   ]
-  // },
-  { text: 'JavaScript', link: '/javascript/' },
+  {
+    text: 'JavaScript',
+    items: [
+      {
+        text: 'JavaScript 基础教程（犀牛书）',
+        link: '/'
+      },
+      {
+        text: 'JavaScript 高级程序开发（红宝书）',
+        link: '/javascript-professional/'
+      },
+      {
+        text: 'javascript 开发技巧',
+        link: '/javascript-technic/'
+      },
+    ]
+  },
+  {
+    text: 'TypeScript',
+    items: [
+      {
+        text: 'TypeScript 入门教程',
+        link: '/typescript-tutorial/'
+      }
+    ]
+  },
   { text: 'CSS', link: '/csses/' },
   { text: 'VUE', link: '/vue/notes/0001' },
   { text: '实战项目', link: '/project/sgg-vue' },
