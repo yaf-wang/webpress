@@ -1,5 +1,11 @@
 # 梦想从学习开始，事业从实践起步。
 
+## 依赖库
+
+- Mitt
+
+  事件总线 JS 库，代码提交小，相对 vue2 中 EventBus
+
 ## CSS 样式
 
 - [enjoy.css](https://enjoycss.com/)

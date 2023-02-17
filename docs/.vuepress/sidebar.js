@@ -98,12 +98,24 @@ module.exports = {
       sidebarDepth: 1,
       children: [
         '/javascript-technic/03',
-        '/javascript-technic/dom-size',
         '/javascript-technic/iife',
+        '/javascript-technic/currying',
         '/javascript-technic/void',
+        '/javascript-technic/dom-size',
         '/javascript-technic/04',
         '/javascript-technic/async-defer',
         '/javascript-technic/storage',
+      ],
+    }
+  ],
+  '/algorithm/': [
+    {
+      title: '算法',
+      path: '/algorithm/',
+      collapsable: false,
+      sidebarDepth: 1,
+      children: [
+        '/algorithm/fibonacci',
       ],
     }
   ],

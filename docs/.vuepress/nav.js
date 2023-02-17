@@ -4,16 +4,20 @@ module.exports = [
     text: 'JavaScript',
     items: [
       {
-        text: 'JavaScript 基础教程（犀牛书）',
+        text: '基础教程（犀牛书）',
         link: '/'
       },
       {
-        text: 'JavaScript 高级程序开发（红宝书）',
+        text: '高级程序开发（红宝书）',
         link: '/javascript-professional/'
       },
       {
-        text: 'javascript 开发技巧',
+        text: '开发技巧',
         link: '/javascript-technic/'
+      },
+      {
+        text: '算法',
+        link: '/algorithm/'
       },
     ]
   },
