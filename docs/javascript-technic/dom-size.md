@@ -14,7 +14,7 @@
 
 DOM 元素尺寸示例图：
 
-![DOM 元素尺寸示例图](./images/dom-size.png)
+![DOM 元素尺寸示例图](./images/dimensions-client.png)
 
 ## 鼠标尺寸属性
 

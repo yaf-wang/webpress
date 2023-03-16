@@ -31,7 +31,31 @@ module.exports = [
     ]
   },
   { text: 'CSS', link: '/csses/' },
-  { text: 'VUE', link: '/vue/notes/0001' },
+  {
+    text: 'VueJS',
+    items: [
+      {
+        text: 'VueJS 设计与实现',
+        link: '/vuejs-design-implement/'
+      },
+      {
+        text: 'VueJS 实战',
+        link: '/vue/notes/'
+      },
+      {
+        text: 'VueRouter',
+        link: '/'
+      }
+    ]
+  },
+  {
+    text: '运维',
+    items: [
+      { text: 'Linux', link: '/linux/' },
+      { text: 'nginx', link: '/nginx/' },
+      { text: '计算机网络', link: '/network/' },
+    ]
+  },
   { text: '实战项目', link: '/project/sgg-vue' },
   { text: '运维', link: '/computer/verdaccio' },
   { text: '其他', link: '/other/semver' },

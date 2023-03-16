@@ -2,21 +2,7 @@ const projectSidebar = require('../project/sidebar')
 
 const computerSidebar = [
   '/computer/verdaccio',
-  {
-    title: 'Linux基础操作',   // 必要的
-    path: '/computer/linux',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
-    collapsable: false, // 可选的, 默认值是 true,
-    sidebarDepth: 1,    // 可选的, 默认值是 1
-    children: [
-      '/computer/linux/',
-      '/computer/linux/file',
-      '/computer/linux/user',
-      '/computer/linux/permissions',
-      '/computer/linux/vim',
-      '/computer/linux/system',
-      '/computer/linux/other',
-    ],
-  },
+
   {
     title: 'Redis',
     path: '/computer/redis/0001',
@@ -50,18 +36,18 @@ const cssSidebar = [
   }
 ]
 
-const vueSidebar = [
-  {
-    title: 'VUE 项目笔记',
-    path: '/vue/notes/0001',
-    collapsable: false,
-    sidebarDepth: 1,
-    children: [
-      '/vue/notes/0001.md',
-      '/vue/notes/interviewer.md',
-    ],
-  },
-]
+// const vueSidebar = [
+//   {
+//     title: 'VUE 项目笔记',
+//     path: '/vue/notes/0001',
+//     collapsable: false,
+//     sidebarDepth: 1,
+//     children: [
+//       '/vue/notes/0001.md',
+//       '/vue/notes/interviewer.md',
+//     ],
+//   },
+// ]
 
 const oSidebar = [
   {
@@ -87,6 +73,45 @@ module.exports = {
         '/javascript-professional/08',
         '/javascript-professional/09',
         '/javascript-professional/10',
+        {
+          title: '第十一章 期约与异步函数',
+          path: '/javascript-professional/11/',
+          sidebarDepth: 1,
+          children: [
+            '/javascript-professional/11/01',
+            '/javascript-professional/11/02',
+            '/javascript-professional/11/03',
+          ]
+        },
+        {
+          title: '第十二章 BOM',
+          path: '/javascript-professional/12/',
+          sidebarDepth: 1,
+          children: [
+            '/javascript-professional/12/01',
+            '/javascript-professional/12/02',
+            '/javascript-professional/12/03',
+          ]
+        },
+        {
+          title: '第十三章 客户端检测',
+          path: '/javascript-professional/13/',
+          sidebarDepth: 1,
+          children: [
+            '/javascript-professional/13/01',
+            '/javascript-professional/13/02',
+            '/javascript-professional/13/03',
+            '/javascript-professional/13/04',
+          ]
+        },
+        {
+          title: '第十四章 DOM',
+          path: '/javascript-professional/14/',
+          sidebarDepth: 1,
+          children: [
+            '/javascript-professional/14/01',
+          ]
+        }
       ],
     }
   ],
@@ -97,6 +122,7 @@ module.exports = {
       collapsable: false,
       sidebarDepth: 1,
       children: [
+        '/javascript-technic/data-type-test',
         '/javascript-technic/03',
         '/javascript-technic/iife',
         '/javascript-technic/currying',
@@ -121,7 +147,31 @@ module.exports = {
   ],
   '/csses/': cssSidebar,
   '/project/': projectSidebar,
-  '/vue/': vueSidebar,
+  '/vuejs-design-implement/': [
+    {
+      title: 'VueJS 设计与实现',
+      path: '/vuejs-design-implement/',
+      collapsable: false,
+      sidebarDepth: 1,
+      children: [
+
+      ],
+    }
+  ],
+  '/vue/notes/': [
+    {
+      title: 'VueJS 笔记',
+      path: '/vue/notes/',
+      collapsable: false,
+      sidebarDepth: 1,
+      children: [
+        '/vue/notes/0001',
+        '/vue/notes/0002',
+        '/vue/notes/event-target',
+        '/vue/notes/interviewer',
+      ],
+    }
+  ],
   '/other/': oSidebar,
   '/typescript-tutorial/': [ // TypeScript
     '',
@@ -152,4 +202,53 @@ module.exports = {
       ],
     },
   ],
+  '/nginx/': [
+    {
+      title: 'Nginx 实战教程',
+      path: '/nginx/tutorial',
+      collapsable: false,
+      sidebarDepth: 1,
+      children: [
+        '/nginx/tutorial/01',
+        '/nginx/tutorial/todos',
+      ],
+    },
+    {
+      title: 'Nginx 面试官',
+      path: '/nginx/interview',
+      collapsable: false,
+      sidebarDepth: 1,
+      children: [
+        '/nginx/01',
+      ],
+    }
+  ],
+  '/linux/': [
+    {
+      title: 'Linux 基础操作',   // 必要的
+      path: '/linux/tutorial/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+      collapsable: false, // 可选的, 默认值是 true,
+      sidebarDepth: 1,    // 可选的, 默认值是 1
+      children: [
+        '/linux/tutorial/01',
+        '/linux/tutorial/file',
+        '/linux/tutorial/user',
+        '/linux/tutorial/permissions',
+        '/linux/tutorial/vim',
+        '/linux/tutorial/system',
+        '/linux/tutorial/other',
+      ],
+    },
+    {
+      title: 'Linux 常用操作',
+      path: '/linux/notes/',
+    },
+  ],
+  '/network/': [
+    '',
+    {
+      title: 'DNS 原理',
+      path: '/network/dns/',
+    },
+  ]
 }
