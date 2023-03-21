@@ -12,7 +12,7 @@ module.exports = [
         link: '/javascript-professional/'
       },
       {
-        text: '开发技巧',
+        text: '开发实战系列',
         link: '/javascript-technic/'
       },
       {
@@ -52,7 +52,7 @@ module.exports = [
     text: '运维',
     items: [
       { text: 'Linux', link: '/linux/' },
-      { text: 'nginx', link: '/nginx/' },
+      { text: 'Nginx', link: '/nginx/tutorial/' },
       { text: '计算机网络', link: '/network/' },
     ]
   },

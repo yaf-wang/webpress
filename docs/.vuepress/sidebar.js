@@ -131,6 +131,7 @@ module.exports = {
         '/javascript-technic/04',
         '/javascript-technic/async-defer',
         '/javascript-technic/storage',
+        '/javascript-technic/IndexedDB'
       ],
     }
   ],
@@ -205,22 +206,20 @@ module.exports = {
   '/nginx/': [
     {
       title: 'Nginx 实战教程',
-      path: '/nginx/tutorial',
-      collapsable: false,
+      path: '/nginx/tutorial/',
+      collapsable: true,
       sidebarDepth: 1,
       children: [
-        '/nginx/tutorial/01',
         '/nginx/tutorial/todos',
+        '/nginx/tutorial/01',
+        '/nginx/tutorial/02',
+        '/nginx/tutorial/referers',
+        '/nginx/tutorial/keep-alived',
       ],
     },
     {
       title: 'Nginx 面试官',
-      path: '/nginx/interview',
-      collapsable: false,
-      sidebarDepth: 1,
-      children: [
-        '/nginx/01',
-      ],
+      path: '/nginx/interview/',
     }
   ],
   '/linux/': [
