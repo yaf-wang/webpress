@@ -83,3 +83,32 @@ URLRewrite
 
 VIP(Virtual IP Address)
 采用 VRRP(Vortual Router Redundancy Protocol) 协议
+
+## sticky
+
+第三方模块，保证同一个用户的请求，nginx 转发同一个服务器上。
+
+步骤：
+
+1. 客户端首次发起访问请求，nginx 接收后，发现请求头没有 cookie，则以轮询方式将请求分发给后端服务器。
+2. 后端服务器处理完请求，将响应数据返回给 nginx。
+3. 此时 nginx 生成带 route 的 cookie，返回给客户端。route 的值与后端服务器对应，可能是明文，也可能是 md5、sha1 等 Hash 值
+4. 客户端接收请求，并保存带 route 的 cookie。
+5. 当客户端下一次发送请求时，会带上 route，nginx 根据接收到的 cookie 中的 route 值，转发给对应的后端服务器
+
+编译安装，sticky 依赖 `openssl-devel` ：
+
+```shell
+## 进入 nginx 源码包
+cd nginx-1.21.6
+
+## 添加第三方模块 add-module 注意：with-module 是添加官方模块
+./configure --prefix=/usr/local/nginx --add-module=/root/nginx-sticky-module
+
+## 编译安装
+make && make install
+```
+
+## nginx 之 keepalive
+
+http2.0 支持多路复用

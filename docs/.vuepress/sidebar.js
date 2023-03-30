@@ -122,6 +122,7 @@ module.exports = {
       collapsable: false,
       sidebarDepth: 1,
       children: [
+        '/javascript-technic/01',
         '/javascript-technic/data-type-test',
         '/javascript-technic/03',
         '/javascript-technic/iife',
